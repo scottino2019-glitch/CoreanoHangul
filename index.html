@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Impara Coreano - Alfabeto Hangul</title>
+    <title>Impara Coreano - 한글 Hangul</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
-        .korean-font { font-family: 'Noto Sans KR', sans-serif; }
+        .korean-font { 
+            font-family: 'Noto Sans KR', sans-serif; 
+        }
         .character-card {
             background: linear-gradient(135deg, #ffffff 0%, #fefefe 100%);
             border: 2px solid #e5e7eb;
@@ -20,7 +22,7 @@
             transform: translateY(-4px);
         }
         .romanization-badge {
-            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
             color: white;
             font-weight: 700;
             text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
@@ -46,16 +48,19 @@
             font-size: 14px;
             text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
         }
+        .detailed-card {
+            min-height: 280px;
+        }
     </style>
 </head>
-<body class="bg-gradient-to-br from-blue-100 to-indigo-100 min-h-screen korean-font">
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen korean-font">
     <div class="container mx-auto px-4 py-8">
         <!-- Header -->
         <header class="text-center mb-8">
-            <h1 class="text-4xl font-bold text-blue-800 mb-2">한국어를 배우자</h1>
+            <h1 class="text-4xl font-bold text-blue-800 mb-2">한국어 배우기</h1>
             <p class="text-lg text-gray-700">Impara il Coreano</p>
             <div class="mt-2 text-sm text-gray-600">
-                🇰🇷 Alfabeto Hangul - 한글
+                🇰🇷 Alfabeto Coreano - 한글 (Hangul)
             </div>
         </header>
 
@@ -73,7 +78,7 @@
 
         <!-- Study Section -->
         <div id="studySection" class="space-y-8">
-            <!-- Character Type Selector -->
+            <!-- Content Type Selector -->
             <div class="flex justify-center mb-6">
                 <div class="bg-white rounded-2xl p-3 shadow-lg border border-gray-200 flex flex-wrap gap-2">
                     <button id="consonantsBtn" class="px-6 py-3 rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold text-sm shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
@@ -82,8 +87,8 @@
                     <button id="vowelsBtn" class="px-6 py-3 rounded-xl text-blue-600 font-semibold hover:bg-blue-50 text-sm transition-all duration-300">
                         모음 Vocali
                     </button>
-                    <button id="syllablesBtn" class="px-6 py-3 rounded-xl text-blue-600 font-semibold hover:bg-blue-50 text-sm transition-all duration-300">
-                        음절 Sillabe Base
+                    <button id="wordsBtn" class="px-6 py-3 rounded-xl text-blue-600 font-semibold hover:bg-blue-50 text-sm transition-all duration-300">
+                        단어 Parole
                     </button>
                 </div>
             </div>
@@ -94,7 +99,7 @@
                     <button id="simpleBtn" class="px-4 py-2 rounded-md bg-indigo-500 text-white font-medium">
                         Semplice
                     </button>
-                    <button id="detailedBtn" class="px-4 py-2 rounded-md text-indigo-500 font-medium hover:bg-indigo-50">
+                    <button id="detailedBtn" class="px-4 py-2 rounded-md text-indigo-600 font-medium hover:bg-indigo-50">
                         Dettagliato
                     </button>
                 </div>
@@ -102,7 +107,7 @@
 
             <!-- Info -->
             <div class="text-center mb-8">
-                <p id="scriptInfo" class="text-xl text-gray-700 font-medium">자음 - Consonanti dell'alfabeto Hangul</p>
+                <p id="contentInfo" class="text-xl text-gray-700 font-medium">자음 - Consonanti coreane</p>
                 <p id="displayInfo" class="text-sm text-gray-500 mt-2">Visualizzazione semplice con romanizzazione</p>
             </div>
 
@@ -121,16 +126,19 @@
                         <button id="recognitionBtn" class="px-3 py-2 rounded-md bg-indigo-500 text-white font-medium text-sm">
                             🔍 Riconoscimento
                         </button>
-                        <button id="writingBtn" class="px-3 py-2 rounded-md text-indigo-500 font-medium hover:bg-indigo-50 text-sm">
+                        <button id="writingBtn" class="px-3 py-2 rounded-md text-indigo-600 font-medium hover:bg-indigo-50 text-sm">
                             ✍️ Scrittura
                         </button>
-                        <button id="syllableBtn" class="px-3 py-2 rounded-md text-indigo-500 font-medium hover:bg-indigo-50 text-sm">
-                            🔤 Sillabe
+                        <button id="meaningBtn" class="px-3 py-2 rounded-md text-indigo-600 font-medium hover:bg-indigo-50 text-sm">
+                            📖 Significati
+                        </button>
+                        <button id="combinationBtn" class="px-3 py-2 rounded-md text-indigo-600 font-medium hover:bg-indigo-50 text-sm">
+                            🔗 Combinazioni
                         </button>
                     </div>
                 </div>
 
-                <!-- Character Type Selector for Practice -->
+                <!-- Content Type Selector for Practice -->
                 <div class="flex justify-center mb-6">
                     <div class="bg-white rounded-lg p-2 shadow-md flex flex-wrap gap-1">
                         <button id="practiceConsonantsBtn" class="px-3 py-2 rounded-md bg-blue-500 text-white font-medium text-sm">
@@ -139,31 +147,31 @@
                         <button id="practiceVowelsBtn" class="px-3 py-2 rounded-md text-blue-500 font-medium hover:bg-blue-50 text-sm">
                             모음
                         </button>
-                        <button id="practiceSyllablesBtn" class="px-3 py-2 rounded-md text-blue-500 font-medium hover:bg-blue-50 text-sm">
-                            음절
+                        <button id="practiceWordsBtn" class="px-3 py-2 rounded-md text-blue-500 font-medium hover:bg-blue-50 text-sm">
+                            단어
                         </button>
                     </div>
                 </div>
 
                 <!-- Practice Card -->
                 <div id="practiceCard" class="bg-white rounded-xl shadow-xl p-8 text-center">
-                    <div class="mb-6">
-                        <div id="questionText" class="text-6xl mb-4 korean-font">ㄱ</div>
-                        <div id="questionPrompt" class="text-lg text-gray-600">Come si pronuncia questo carattere?</div>
+                    <div class="mb-8">
+                        <div id="questionText" class="text-7xl mb-6 korean-font font-bold text-gray-800">ㄱ</div>
+                        <div id="questionPrompt" class="text-lg text-gray-600 font-medium">Come si pronuncia questo carattere?</div>
                     </div>
 
                     <!-- Answer Options -->
-                    <div id="answerOptions" class="grid grid-cols-2 gap-4 mb-6">
+                    <div id="answerOptions" class="grid grid-cols-2 gap-4 mb-8">
                         <!-- Options will be populated by JavaScript -->
                     </div>
 
                     <!-- Writing Input -->
-                    <div id="writingInput" class="hidden mb-6">
+                    <div id="writingInput" class="hidden mb-8">
                         <input type="text" id="writingAnswer" class="w-full p-4 text-center text-2xl border-2 border-gray-300 rounded-lg focus:border-indigo-500 focus:outline-none" placeholder="Scrivi la romanizzazione...">
                     </div>
 
                     <!-- Feedback -->
-                    <div id="feedback" class="hidden mb-6 p-4 rounded-lg">
+                    <div id="feedback" class="hidden mb-8 p-4 rounded-lg">
                         <div id="feedbackText" class="text-lg font-medium"></div>
                     </div>
 
@@ -178,12 +186,12 @@
                     </div>
 
                     <!-- Score and Progress -->
-                    <div class="mt-6 space-y-2">
+                    <div class="mt-8 space-y-2">
                         <div class="text-sm text-gray-600">
                             Punteggio: <span id="score">0</span>/<span id="total">0</span>
                         </div>
                         <div class="text-xs text-gray-500">
-                            <span id="exerciseInfo">Consonanti: 19 caratteri disponibili</span>
+                            <span id="exerciseInfo">Consonanti: 14 caratteri disponibili</span>
                         </div>
                     </div>
                 </div>
@@ -192,82 +200,79 @@
     </div>
 
     <script>
-        // Korean Hangul character data
+        // Korean alphabet data
         const consonants = {
-            'ㄱ': { romanization: 'g/k', name: 'giyeok', type: 'basic' },
-            'ㄴ': { romanization: 'n', name: 'nieun', type: 'basic' },
-            'ㄷ': { romanization: 'd/t', name: 'digeut', type: 'basic' },
-            'ㄹ': { romanization: 'r/l', name: 'rieul', type: 'basic' },
-            'ㅁ': { romanization: 'm', name: 'mieum', type: 'basic' },
-            'ㅂ': { romanization: 'b/p', name: 'bieup', type: 'basic' },
-            'ㅅ': { romanization: 's', name: 'siot', type: 'basic' },
-            'ㅇ': { romanization: 'ng/silent', name: 'ieung', type: 'basic' },
-            'ㅈ': { romanization: 'j', name: 'jieut', type: 'basic' },
-            'ㅊ': { romanization: 'ch', name: 'chieut', type: 'basic' },
-            'ㅋ': { romanization: 'k', name: 'kieuk', type: 'basic' },
-            'ㅌ': { romanization: 't', name: 'tieut', type: 'basic' },
-            'ㅍ': { romanization: 'p', name: 'pieup', type: 'basic' },
-            'ㅎ': { romanization: 'h', name: 'hieut', type: 'basic' },
-            'ㄲ': { romanization: 'kk', name: 'ssanggiyeok', type: 'double' },
-            'ㄸ': { romanization: 'tt', name: 'ssangdigeut', type: 'double' },
-            'ㅃ': { romanization: 'pp', name: 'ssangbieup', type: 'double' },
-            'ㅆ': { romanization: 'ss', name: 'ssangsiot', type: 'double' },
-            'ㅉ': { romanization: 'jj', name: 'ssangjieut', type: 'double' }
+            'ㄱ': { romanization: 'g/k', name: 'giyeok', type: 'consonant', sound: 'g come in gatto' },
+            'ㄴ': { romanization: 'n', name: 'nieun', type: 'consonant', sound: 'n come in naso' },
+            'ㄷ': { romanization: 'd/t', name: 'digeut', type: 'consonant', sound: 'd come in dado' },
+            'ㄹ': { romanization: 'r/l', name: 'rieul', type: 'consonant', sound: 'r/l liquida' },
+            'ㅁ': { romanization: 'm', name: 'mieum', type: 'consonant', sound: 'm come in mano' },
+            'ㅂ': { romanization: 'b/p', name: 'bieup', type: 'consonant', sound: 'b come in bello' },
+            'ㅅ': { romanization: 's', name: 'siot', type: 'consonant', sound: 's come in sole' },
+            'ㅇ': { romanization: 'ng/silent', name: 'ieung', type: 'consonant', sound: 'silenzioso o ng' },
+            'ㅈ': { romanization: 'j', name: 'jieut', type: 'consonant', sound: 'j come in giallo' },
+            'ㅊ': { romanization: 'ch', name: 'chieut', type: 'consonant', sound: 'ch come in ciao' },
+            'ㅋ': { romanization: 'k', name: 'kieuk', type: 'consonant', sound: 'k aspirata' },
+            'ㅌ': { romanization: 't', name: 'tieut', type: 'consonant', sound: 't aspirata' },
+            'ㅍ': { romanization: 'p', name: 'pieup', type: 'consonant', sound: 'p aspirata' },
+            'ㅎ': { romanization: 'h', name: 'hieut', type: 'consonant', sound: 'h come in hotel' }
         };
 
         const vowels = {
-            'ㅏ': { romanization: 'a', name: 'a', type: 'basic' },
-            'ㅑ': { romanization: 'ya', name: 'ya', type: 'basic' },
-            'ㅓ': { romanization: 'eo', name: 'eo', type: 'basic' },
-            'ㅕ': { romanization: 'yeo', name: 'yeo', type: 'basic' },
-            'ㅗ': { romanization: 'o', name: 'o', type: 'basic' },
-            'ㅛ': { romanization: 'yo', name: 'yo', type: 'basic' },
-            'ㅜ': { romanization: 'u', name: 'u', type: 'basic' },
-            'ㅠ': { romanization: 'yu', name: 'yu', type: 'basic' },
-            'ㅡ': { romanization: 'eu', name: 'eu', type: 'basic' },
-            'ㅣ': { romanization: 'i', name: 'i', type: 'basic' },
-            'ㅐ': { romanization: 'ae', name: 'ae', type: 'compound' },
-            'ㅒ': { romanization: 'yae', name: 'yae', type: 'compound' },
-            'ㅔ': { romanization: 'e', name: 'e', type: 'compound' },
-            'ㅖ': { romanization: 'ye', name: 'ye', type: 'compound' },
-            'ㅘ': { romanization: 'wa', name: 'wa', type: 'compound' },
-            'ㅙ': { romanization: 'wae', name: 'wae', type: 'compound' },
-            'ㅚ': { romanization: 'oe', name: 'oe', type: 'compound' },
-            'ㅝ': { romanization: 'wo', name: 'wo', type: 'compound' },
-            'ㅞ': { romanization: 'we', name: 'we', type: 'compound' },
-            'ㅟ': { romanization: 'wi', name: 'wi', type: 'compound' },
-            'ㅢ': { romanization: 'ui', name: 'ui', type: 'compound' }
+            'ㅏ': { romanization: 'a', name: 'a', type: 'vowel', sound: 'a come in casa' },
+            'ㅑ': { romanization: 'ya', name: 'ya', type: 'vowel', sound: 'ya come in yacht' },
+            'ㅓ': { romanization: 'eo', name: 'eo', type: 'vowel', sound: 'o aperta' },
+            'ㅕ': { romanization: 'yeo', name: 'yeo', type: 'vowel', sound: 'yo aperta' },
+            'ㅗ': { romanization: 'o', name: 'o', type: 'vowel', sound: 'o come in sole' },
+            'ㅛ': { romanization: 'yo', name: 'yo', type: 'vowel', sound: 'yo come in yoga' },
+            'ㅜ': { romanization: 'u', name: 'u', type: 'vowel', sound: 'u come in luna' },
+            'ㅠ': { romanization: 'yu', name: 'yu', type: 'vowel', sound: 'yu come in yuzu' },
+            'ㅡ': { romanization: 'eu', name: 'eu', type: 'vowel', sound: 'eu (suono unico)' },
+            'ㅣ': { romanization: 'i', name: 'i', type: 'vowel', sound: 'i come in vino' }
         };
 
-        const syllables = {
-            '가': { romanization: 'ga', meaning: 'andare', type: 'basic' },
-            '나': { romanization: 'na', meaning: 'io', type: 'basic' },
-            '다': { romanization: 'da', meaning: 'tutto', type: 'basic' },
-            '라': { romanization: 'ra', meaning: 'la (nota)', type: 'basic' },
-            '마': { romanization: 'ma', meaning: 'cavallo', type: 'basic' },
-            '바': { romanization: 'ba', meaning: 'speranza', type: 'basic' },
-            '사': { romanization: 'sa', meaning: 'quattro', type: 'basic' },
-            '아': { romanization: 'a', meaning: 'ah!', type: 'basic' },
-            '자': { romanization: 'ja', meaning: 'sé stesso', type: 'basic' },
-            '차': { romanization: 'cha', meaning: 'tè/auto', type: 'basic' },
-            '카': { romanization: 'ka', meaning: 'carta', type: 'basic' },
-            '타': { romanization: 'ta', meaning: 'altro', type: 'basic' },
-            '파': { romanization: 'pa', meaning: 'onda', type: 'basic' },
-            '하': { romanization: 'ha', meaning: 'fare', type: 'basic' },
-            '한': { romanization: 'han', meaning: 'uno/Corea', type: 'basic' },
-            '국': { romanization: 'guk', meaning: 'paese', type: 'basic' },
-            '어': { romanization: 'eo', meaning: 'pesce', type: 'basic' },
-            '학': { romanization: 'hak', meaning: 'studio', type: 'basic' },
-            '생': { romanization: 'saeng', meaning: 'vita', type: 'basic' },
-            '사랑': { romanization: 'sarang', meaning: 'amore', type: 'word' }
+        const words = {
+            '안녕': { romanization: 'annyeong', meaning: 'ciao', category: 'greetings' },
+            '사랑': { romanization: 'sarang', meaning: 'amore', category: 'emotions' },
+            '물': { romanization: 'mul', meaning: 'acqua', category: 'nature' },
+            '집': { romanization: 'jip', meaning: 'casa', category: 'places' },
+            '학교': { romanization: 'hakgyo', meaning: 'scuola', category: 'places' },
+            '친구': { romanization: 'chingu', meaning: 'amico', category: 'people' },
+            '가족': { romanization: 'gajok', meaning: 'famiglia', category: 'family' },
+            '음식': { romanization: 'eumsik', meaning: 'cibo', category: 'food' },
+            '시간': { romanization: 'sigan', meaning: 'tempo', category: 'abstract' },
+            '책': { romanization: 'chaek', meaning: 'libro', category: 'objects' },
+            '컴퓨터': { romanization: 'keompyuteo', meaning: 'computer', category: 'technology' },
+            '전화': { romanization: 'jeonhwa', meaning: 'telefono', category: 'technology' },
+            '자동차': { romanization: 'jadongcha', meaning: 'auto', category: 'transport' },
+            '비행기': { romanization: 'bihaenggi', meaning: 'aereo', category: 'transport' },
+            '날씨': { romanization: 'nalssi', meaning: 'tempo (meteo)', category: 'nature' },
+            '꽃': { romanization: 'kkot', meaning: 'fiore', category: 'nature' },
+            '나무': { romanization: 'namu', meaning: 'albero', category: 'nature' },
+            '바다': { romanization: 'bada', meaning: 'mare', category: 'nature' },
+            '산': { romanization: 'san', meaning: 'montagna', category: 'nature' },
+            '도시': { romanization: 'dosi', meaning: 'città', category: 'places' }
+        };
+
+        const combinations = {
+            'ㅎ + ㅏ + ㄴ': { result: '한', romanization: 'han', meaning: 'uno/coreano' },
+            'ㄱ + ㅜ + ㄱ': { result: '국', romanization: 'guk', meaning: 'paese' },
+            'ㅁ + ㅜ + ㄹ': { result: '물', romanization: 'mul', meaning: 'acqua' },
+            'ㅈ + ㅣ + ㅂ': { result: '집', romanization: 'jip', meaning: 'casa' },
+            'ㅊ + ㅐ + ㄱ': { result: '책', romanization: 'chaek', meaning: 'libro' },
+            'ㅅ + ㅏ + ㄹ': { result: '살', romanization: 'sal', meaning: 'vivere' },
+            'ㄴ + ㅏ + ㅁ': { result: '남', romanization: 'nam', meaning: 'uomo' },
+            'ㅇ + ㅕ + ㅈ': { result: '여', romanization: 'yeo', meaning: 'donna' },
+            'ㅂ + ㅏ + ㅁ': { result: '밤', romanization: 'bam', meaning: 'notte' },
+            'ㄴ + ㅏ + ㄹ': { result: '날', romanization: 'nal', meaning: 'giorno' }
         };
 
         // State
-        let currentType = 'consonants';
+        let currentContent = 'consonants';
         let currentMode = 'study';
         let displayMode = 'simple';
         let practiceMode = 'recognition';
-        let practiceType = 'consonants';
+        let practiceContent = 'consonants';
         let currentQuestion = null;
         let score = 0;
         let total = 0;
@@ -279,18 +284,19 @@
         const practiceSection = document.getElementById('practiceSection');
         const consonantsBtn = document.getElementById('consonantsBtn');
         const vowelsBtn = document.getElementById('vowelsBtn');
-        const syllablesBtn = document.getElementById('syllablesBtn');
+        const wordsBtn = document.getElementById('wordsBtn');
         const simpleBtn = document.getElementById('simpleBtn');
         const detailedBtn = document.getElementById('detailedBtn');
-        const scriptInfo = document.getElementById('scriptInfo');
+        const contentInfo = document.getElementById('contentInfo');
         const displayInfo = document.getElementById('displayInfo');
         const characterGrid = document.getElementById('characterGrid');
         const recognitionBtn = document.getElementById('recognitionBtn');
         const writingBtn = document.getElementById('writingBtn');
-        const syllableBtn = document.getElementById('syllableBtn');
+        const meaningBtn = document.getElementById('meaningBtn');
+        const combinationBtn = document.getElementById('combinationBtn');
         const practiceConsonantsBtn = document.getElementById('practiceConsonantsBtn');
         const practiceVowelsBtn = document.getElementById('practiceVowelsBtn');
-        const practiceSyllablesBtn = document.getElementById('practiceSyllablesBtn');
+        const practiceWordsBtn = document.getElementById('practiceWordsBtn');
         const practiceCard = document.getElementById('practiceCard');
         const questionText = document.getElementById('questionText');
         const questionPrompt = document.getElementById('questionPrompt');
@@ -308,17 +314,18 @@
         // Event listeners
         studyBtn.addEventListener('click', () => switchMode('study'));
         practiceBtn.addEventListener('click', () => switchMode('practice'));
-        consonantsBtn.addEventListener('click', () => switchType('consonants'));
-        vowelsBtn.addEventListener('click', () => switchType('vowels'));
-        syllablesBtn.addEventListener('click', () => switchType('syllables'));
+        consonantsBtn.addEventListener('click', () => switchContent('consonants'));
+        vowelsBtn.addEventListener('click', () => switchContent('vowels'));
+        wordsBtn.addEventListener('click', () => switchContent('words'));
         simpleBtn.addEventListener('click', () => switchDisplayMode('simple'));
         detailedBtn.addEventListener('click', () => switchDisplayMode('detailed'));
         recognitionBtn.addEventListener('click', () => switchPracticeMode('recognition'));
         writingBtn.addEventListener('click', () => switchPracticeMode('writing'));
-        syllableBtn.addEventListener('click', () => switchPracticeMode('syllable'));
-        practiceConsonantsBtn.addEventListener('click', () => switchPracticeType('consonants'));
-        practiceVowelsBtn.addEventListener('click', () => switchPracticeType('vowels'));
-        practiceSyllablesBtn.addEventListener('click', () => switchPracticeType('syllables'));
+        meaningBtn.addEventListener('click', () => switchPracticeMode('meaning'));
+        combinationBtn.addEventListener('click', () => switchPracticeMode('combination'));
+        practiceConsonantsBtn.addEventListener('click', () => switchPracticeContent('consonants'));
+        practiceVowelsBtn.addEventListener('click', () => switchPracticeContent('vowels'));
+        practiceWordsBtn.addEventListener('click', () => switchPracticeContent('words'));
         nextBtn.addEventListener('click', nextQuestion);
         checkBtn.addEventListener('click', checkWritingAnswer);
         writingAnswer.addEventListener('keypress', (e) => {
@@ -343,22 +350,22 @@
             }
         }
 
-        function switchType(type) {
-            currentType = type;
+        function switchContent(content) {
+            currentContent = content;
             // Reset buttons
             consonantsBtn.className = 'px-6 py-3 rounded-xl text-blue-600 font-semibold hover:bg-blue-50 text-sm transition-all duration-300';
             vowelsBtn.className = 'px-6 py-3 rounded-xl text-blue-600 font-semibold hover:bg-blue-50 text-sm transition-all duration-300';
-            syllablesBtn.className = 'px-6 py-3 rounded-xl text-blue-600 font-semibold hover:bg-blue-50 text-sm transition-all duration-300';
+            wordsBtn.className = 'px-6 py-3 rounded-xl text-blue-600 font-semibold hover:bg-blue-50 text-sm transition-all duration-300';
             
-            if (type === 'consonants') {
+            if (content === 'consonants') {
                 consonantsBtn.className = 'px-6 py-3 rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold text-sm shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105';
-                scriptInfo.textContent = '자음 - Consonanti dell\'alfabeto Hangul';
-            } else if (type === 'vowels') {
+                contentInfo.textContent = '자음 - Consonanti coreane';
+            } else if (content === 'vowels') {
                 vowelsBtn.className = 'px-6 py-3 rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold text-sm shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105';
-                scriptInfo.textContent = '모음 - Vocali dell\'alfabeto Hangul';
-            } else if (type === 'syllables') {
-                syllablesBtn.className = 'px-6 py-3 rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold text-sm shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105';
-                scriptInfo.textContent = '음절 - Sillabe base e parole comuni';
+                contentInfo.textContent = '모음 - Vocali coreane';
+            } else if (content === 'words') {
+                wordsBtn.className = 'px-6 py-3 rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold text-sm shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105';
+                contentInfo.textContent = '단어 - Parole coreane comuni';
             }
             renderCharacterGrid();
         }
@@ -367,12 +374,12 @@
             displayMode = mode;
             if (mode === 'simple') {
                 simpleBtn.className = 'px-4 py-2 rounded-md bg-indigo-500 text-white font-medium';
-                detailedBtn.className = 'px-4 py-2 rounded-md text-indigo-500 font-medium hover:bg-indigo-50';
+                detailedBtn.className = 'px-4 py-2 rounded-md text-indigo-600 font-medium hover:bg-indigo-50';
                 displayInfo.textContent = 'Visualizzazione semplice con romanizzazione';
             } else {
                 detailedBtn.className = 'px-4 py-2 rounded-md bg-indigo-500 text-white font-medium';
-                simpleBtn.className = 'px-4 py-2 rounded-md text-indigo-500 font-medium hover:bg-indigo-50';
-                displayInfo.textContent = 'Visualizzazione dettagliata con nomi e informazioni extra';
+                simpleBtn.className = 'px-4 py-2 rounded-md text-indigo-600 font-medium hover:bg-indigo-50';
+                displayInfo.textContent = 'Visualizzazione dettagliata con spiegazioni fonetiche';
             }
             renderCharacterGrid();
         }
@@ -380,33 +387,36 @@
         function switchPracticeMode(mode) {
             practiceMode = mode;
             // Reset buttons
-            recognitionBtn.className = 'px-3 py-2 rounded-md text-indigo-500 font-medium hover:bg-indigo-50 text-sm';
-            writingBtn.className = 'px-3 py-2 rounded-md text-indigo-500 font-medium hover:bg-indigo-50 text-sm';
-            syllableBtn.className = 'px-3 py-2 rounded-md text-indigo-500 font-medium hover:bg-indigo-50 text-sm';
+            recognitionBtn.className = 'px-3 py-2 rounded-md text-indigo-600 font-medium hover:bg-indigo-50 text-sm';
+            writingBtn.className = 'px-3 py-2 rounded-md text-indigo-600 font-medium hover:bg-indigo-50 text-sm';
+            meaningBtn.className = 'px-3 py-2 rounded-md text-indigo-600 font-medium hover:bg-indigo-50 text-sm';
+            combinationBtn.className = 'px-3 py-2 rounded-md text-indigo-600 font-medium hover:bg-indigo-50 text-sm';
             
             if (mode === 'recognition') {
                 recognitionBtn.className = 'px-3 py-2 rounded-md bg-indigo-500 text-white font-medium text-sm';
             } else if (mode === 'writing') {
                 writingBtn.className = 'px-3 py-2 rounded-md bg-indigo-500 text-white font-medium text-sm';
-            } else if (mode === 'syllable') {
-                syllableBtn.className = 'px-3 py-2 rounded-md bg-indigo-500 text-white font-medium text-sm';
+            } else if (mode === 'meaning') {
+                meaningBtn.className = 'px-3 py-2 rounded-md bg-indigo-500 text-white font-medium text-sm';
+            } else if (mode === 'combination') {
+                combinationBtn.className = 'px-3 py-2 rounded-md bg-indigo-500 text-white font-medium text-sm';
             }
             startPractice();
         }
 
-        function switchPracticeType(type) {
-            practiceType = type;
+        function switchPracticeContent(content) {
+            practiceContent = content;
             // Reset buttons
             practiceConsonantsBtn.className = 'px-3 py-2 rounded-md text-blue-500 font-medium hover:bg-blue-50 text-sm';
             practiceVowelsBtn.className = 'px-3 py-2 rounded-md text-blue-500 font-medium hover:bg-blue-50 text-sm';
-            practiceSyllablesBtn.className = 'px-3 py-2 rounded-md text-blue-500 font-medium hover:bg-blue-50 text-sm';
+            practiceWordsBtn.className = 'px-3 py-2 rounded-md text-blue-500 font-medium hover:bg-blue-50 text-sm';
             
-            if (type === 'consonants') {
+            if (content === 'consonants') {
                 practiceConsonantsBtn.className = 'px-3 py-2 rounded-md bg-blue-500 text-white font-medium text-sm';
-            } else if (type === 'vowels') {
+            } else if (content === 'vowels') {
                 practiceVowelsBtn.className = 'px-3 py-2 rounded-md bg-blue-500 text-white font-medium text-sm';
-            } else if (type === 'syllables') {
-                practiceSyllablesBtn.className = 'px-3 py-2 rounded-md bg-blue-500 text-white font-medium text-sm';
+            } else if (content === 'words') {
+                practiceWordsBtn.className = 'px-3 py-2 rounded-md bg-blue-500 text-white font-medium text-sm';
             }
             updateExerciseInfo();
             startPractice();
@@ -416,12 +426,12 @@
             characterGrid.innerHTML = '';
             let data;
             
-            if (currentType === 'consonants') {
+            if (currentContent === 'consonants') {
                 data = consonants;
-            } else if (currentType === 'vowels') {
+            } else if (currentContent === 'vowels') {
                 data = vowels;
-            } else if (currentType === 'syllables') {
-                data = syllables;
+            } else if (currentContent === 'words') {
+                data = words;
             }
             
             Object.entries(data).forEach(([char, info]) => {
@@ -430,7 +440,7 @@
                 if (displayMode === 'simple') {
                     card.className = 'character-card rounded-xl p-8 text-center transition-all duration-300 cursor-pointer flex flex-col justify-center';
                     
-                    if (currentType === 'syllables' && info.meaning) {
+                    if (currentContent === 'words') {
                         card.innerHTML = `
                             <div class="flex flex-col items-center space-y-5">
                                 <div class="text-7xl korean-font font-bold text-gray-800">${char}</div>
@@ -448,15 +458,15 @@
                         `;
                     }
                 } else {
-                    card.className = 'character-card rounded-xl p-6 text-center transition-all duration-300 cursor-pointer min-h-[260px] flex flex-col justify-center';
+                    card.className = 'character-card detailed-card rounded-xl p-6 text-center transition-all duration-300 cursor-pointer flex flex-col justify-center';
                     
-                    if (currentType === 'syllables' && info.meaning) {
+                    if (currentContent === 'words') {
                         card.innerHTML = `
                             <div class="flex flex-col items-center space-y-4">
                                 <div class="text-6xl korean-font font-bold text-gray-800">${char}</div>
                                 <div class="romanization-badge">${info.romanization}</div>
                                 <div class="meaning-badge">${info.meaning}</div>
-                                <div class="type-badge">${info.type}</div>
+                                <div class="type-badge">${info.category}</div>
                             </div>
                         `;
                     } else {
@@ -466,6 +476,10 @@
                                 <div class="romanization-badge">${info.romanization}</div>
                                 <div class="bg-gradient-to-r from-purple-400 to-pink-400 text-white px-4 py-2 rounded-full text-sm font-bold">${info.name}</div>
                                 <div class="type-badge">${info.type}</div>
+                                <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-3 text-sm text-gray-700 border border-blue-200">
+                                    <div class="font-medium mb-1">Pronuncia:</div>
+                                    <div>${info.sound}</div>
+                                </div>
                             </div>
                         `;
                     }
@@ -485,12 +499,12 @@
 
         function nextQuestion() {
             let data;
-            if (practiceType === 'consonants') {
+            if (practiceContent === 'consonants') {
                 data = consonants;
-            } else if (practiceType === 'vowels') {
+            } else if (practiceContent === 'vowels') {
                 data = vowels;
-            } else if (practiceType === 'syllables') {
-                data = syllables;
+            } else if (practiceContent === 'words') {
+                data = words;
             }
             
             const charArray = Object.entries(data);
@@ -507,14 +521,21 @@
                 setupRecognitionQuestion();
             } else if (practiceMode === 'writing') {
                 setupWritingQuestion();
-            } else if (practiceMode === 'syllable') {
-                setupSyllableQuestion();
+            } else if (practiceMode === 'meaning') {
+                setupMeaningQuestion();
+            } else if (practiceMode === 'combination') {
+                setupCombinationQuestion();
             }
         }
 
         function setupRecognitionQuestion() {
             questionText.textContent = currentQuestion.char;
-            questionPrompt.textContent = 'Come si pronuncia questo carattere?';
+            
+            if (practiceContent === 'consonants' || practiceContent === 'vowels') {
+                questionPrompt.textContent = 'Come si pronuncia questo carattere?';
+            } else {
+                questionPrompt.textContent = 'Come si pronuncia questa parola?';
+            }
             
             answerOptions.classList.remove('hidden');
             writingInput.classList.add('hidden');
@@ -524,12 +545,12 @@
             let correctAnswer = currentQuestion.data.romanization;
             let allAnswers;
             
-            if (practiceType === 'consonants') {
+            if (practiceContent === 'consonants') {
                 allAnswers = Object.values(consonants).map(c => c.romanization);
-            } else if (practiceType === 'vowels') {
+            } else if (practiceContent === 'vowels') {
                 allAnswers = Object.values(vowels).map(v => v.romanization);
             } else {
-                allAnswers = Object.values(syllables).map(s => s.romanization);
+                allAnswers = Object.values(words).map(w => w.romanization);
             }
 
             const options = [correctAnswer];
@@ -545,7 +566,7 @@
             answerOptions.innerHTML = '';
             options.forEach(option => {
                 const button = document.createElement('button');
-                button.className = 'p-3 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors font-medium';
+                button.className = 'p-4 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors font-medium text-lg';
                 button.textContent = option;
                 button.addEventListener('click', () => checkRecognitionAnswer(option, correctAnswer));
                 answerOptions.appendChild(button);
@@ -554,7 +575,12 @@
 
         function setupWritingQuestion() {
             questionText.textContent = currentQuestion.char;
-            questionPrompt.textContent = 'Scrivi la romanizzazione di questo carattere:';
+            
+            if (practiceContent === 'consonants' || practiceContent === 'vowels') {
+                questionPrompt.textContent = 'Scrivi la romanizzazione di questo carattere:';
+            } else {
+                questionPrompt.textContent = 'Scrivi la romanizzazione di questa parola:';
+            }
             
             answerOptions.classList.add('hidden');
             writingInput.classList.remove('hidden');
@@ -564,13 +590,13 @@
             writingAnswer.focus();
         }
 
-        function setupSyllableQuestion() {
-            if (practiceType === 'syllables' && currentQuestion.data.meaning) {
+        function setupMeaningQuestion() {
+            if (practiceContent === 'words' && currentQuestion.data.meaning) {
                 questionText.textContent = currentQuestion.char;
-                questionPrompt.textContent = 'Qual è il significato di questa sillaba/parola?';
+                questionPrompt.textContent = 'Qual è il significato di questa parola?';
                 
                 const correctAnswer = currentQuestion.data.meaning;
-                const allAnswers = Object.values(syllables).filter(s => s.meaning).map(s => s.meaning);
+                const allAnswers = Object.values(words).map(w => w.meaning);
                 
                 const options = [correctAnswer];
                 while (options.length < 4) {
@@ -590,7 +616,7 @@
                 answerOptions.innerHTML = '';
                 options.forEach(option => {
                     const button = document.createElement('button');
-                    button.className = 'p-3 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors font-medium text-sm';
+                    button.className = 'p-4 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors font-medium text-sm';
                     button.textContent = option;
                     button.addEventListener('click', () => checkRecognitionAnswer(option, correctAnswer));
                     answerOptions.appendChild(button);
@@ -598,6 +624,46 @@
             } else {
                 setupRecognitionQuestion();
             }
+        }
+
+        function setupCombinationQuestion() {
+            const combArray = Object.entries(combinations);
+            const randomComb = combArray[Math.floor(Math.random() * combArray.length)];
+            
+            currentQuestion = {
+                char: randomComb[0],
+                data: randomComb[1]
+            };
+
+            questionText.textContent = randomComb[0];
+            questionPrompt.textContent = 'Quale sillaba si forma combinando questi caratteri?';
+            
+            const correctAnswer = randomComb[1].result;
+            const allAnswers = Object.values(combinations).map(c => c.result);
+            
+            const options = [correctAnswer];
+            while (options.length < 4) {
+                const randomAnswer = allAnswers[Math.floor(Math.random() * allAnswers.length)];
+                if (!options.includes(randomAnswer)) {
+                    options.push(randomAnswer);
+                }
+            }
+            
+            options.sort(() => Math.random() - 0.5);
+            
+            answerOptions.classList.remove('hidden');
+            writingInput.classList.add('hidden');
+            nextBtn.classList.remove('hidden');
+            checkBtn.classList.add('hidden');
+            
+            answerOptions.innerHTML = '';
+            options.forEach(option => {
+                const button = document.createElement('button');
+                button.className = 'p-4 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors font-medium text-lg korean-font';
+                button.textContent = option;
+                button.addEventListener('click', () => checkCombinationAnswer(option, correctAnswer));
+                answerOptions.appendChild(button);
+            });
         }
 
         function checkRecognitionAnswer(selected, correct) {
@@ -642,9 +708,33 @@
             checkBtn.classList.add('hidden');
         }
 
+        function checkCombinationAnswer(selected, correct) {
+            total++;
+            const isCorrect = selected === correct;
+            
+            if (isCorrect) {
+                score++;
+                showFeedback(`정답! 🎉 ${currentQuestion.data.romanization} = ${currentQuestion.data.meaning}`, 'bg-green-100 text-green-800');
+            } else {
+                showFeedback(`틀렸습니다. La sillaba corretta è: ${correct} (${currentQuestion.data.romanization} = ${currentQuestion.data.meaning})`, 'bg-red-100 text-red-800');
+            }
+            
+            updateScore();
+            
+            const buttons = answerOptions.querySelectorAll('button');
+            buttons.forEach(btn => {
+                btn.disabled = true;
+                if (btn.textContent === correct) {
+                    btn.className = btn.className.replace('bg-gray-100', 'bg-green-200');
+                } else if (btn.textContent === selected && !isCorrect) {
+                    btn.className = btn.className.replace('bg-gray-100', 'bg-red-200');
+                }
+            });
+        }
+
         function showFeedback(message, className) {
             feedbackText.textContent = message;
-            feedback.className = `mb-6 p-4 rounded-lg ${className}`;
+            feedback.className = `mb-8 p-4 rounded-lg ${className}`;
             feedback.classList.remove('hidden');
         }
 
@@ -655,25 +745,25 @@
 
         function updateExerciseInfo() {
             let count;
-            let typeName;
+            let contentName;
             
-            if (practiceType === 'consonants') {
+            if (practiceContent === 'consonants') {
                 count = Object.keys(consonants).length;
-                typeName = 'Consonanti';
-            } else if (practiceType === 'vowels') {
+                contentName = 'Consonanti';
+            } else if (practiceContent === 'vowels') {
                 count = Object.keys(vowels).length;
-                typeName = 'Vocali';
-            } else if (practiceType === 'syllables') {
-                count = Object.keys(syllables).length;
-                typeName = 'Sillabe';
+                contentName = 'Vocali';
+            } else if (practiceContent === 'words') {
+                count = Object.keys(words).length;
+                contentName = 'Parole';
             }
             
-            exerciseInfo.textContent = `${typeName}: ${count} caratteri disponibili`;
+            exerciseInfo.textContent = `${contentName}: ${count} elementi disponibili`;
         }
 
         // Initialize
         renderCharacterGrid();
         updateExerciseInfo();
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'970ca20d678fee81',t:'MTc1NTQ3MDAwNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9711f37192393d3b',t:'MTc1NTUyNTc2OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
