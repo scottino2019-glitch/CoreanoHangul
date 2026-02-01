@@ -243,5 +243,70 @@
     "termine": "작다",
     "roman": "jakda",
     "traduzione": "piccolo"
+  },
+  {
+    "termine": "빨강",
+    "roman": "ppalgang",
+    "traduzione": "rosso"
+  },
+  {
+    "termine": "파랑",
+    "roman": "parang",
+    "traduzione": "blu"
+  },
+  {
+    "termine": "초록",
+    "roman": "cholog",
+    "traduzione": "verde"
+  },
+  {
+    "termine": "노랑",
+    "roman": "norang",
+    "traduzione": "giallo"
+  },
+  {
+    "termine": "검정",
+    "roman": "geomjeong",
+    "traduzione": "nero"
+  },
+  {
+    "termine": "하양",
+    "roman": "hayang",
+    "traduzione": "bianco"
+  },
+  {
+    "termine": "갈색",
+    "roman": "galsaek",
+    "traduzione": "marrone"
+  },
+  {
+    "termine": "너희",
+    "roman": "neohui",
+    "traduzione": "voi (informale)"
+  },
+  {
+    "termine": "너희들",
+    "roman": "neohuideul",
+    "traduzione": "voi (plurale informale)"
+  },
+  {
+    "termine": "여러분",
+    "roman": "yeoreobun",
+    "traduzione": "voi (cortese/plurale)"
+  },
+  {
+    "termine": "당신들",
+    "roman": "dangsindeul",
+    "traduzione": "voi (formale)"
+  },
+  {
+    "termine": "그들",
+    "roman": "geudeul",
+    "traduzione": "essi/loro (neutro)"
+  },
+  {
+    "termine": "그녀들",
+    "roman": "geunyeodeul",
+    "traduzione": "esse/loro (femminile)"
   }
 ]
