@@ -308,5 +308,110 @@
     "termine": "그녀들",
     "roman": "geunyeodeul",
     "traduzione": "esse/loro (femminile)"
+  },
+{
+    "termine": "코피",
+    "roman": "keopi",
+    "traduzione": "caffe"
+  },
+  {
+    "termine": "한국",
+    "roman": "Hanguk",
+    "traduzione": "Corea del Sud"
+  },
+  {
+    "termine": "조선",
+    "roman": "Joseon",
+    "traduzione": "Corea del Nord"
+  },
+  {
+    "termine": "이탈리아",
+    "roman": "Itallia",
+    "traduzione": "Italia"
+  },
+  {
+    "termine": "일본",
+    "roman": "Ilbon",
+    "traduzione": "Giappone"
+  },
+  {
+    "termine": "중국",
+    "roman": "Junggug",
+    "traduzione": "Cina"
+  },
+  {
+    "termine": "미국",
+    "roman": "Migug",
+    "traduzione": "Stati Uniti"
+  },
+  {
+    "termine": "영국",
+    "roman": "Yeonggug",
+    "traduzione": "Regno Unito"
+  },
+  {
+    "termine": "프랑스",
+    "roman": "Peurangseu",
+    "traduzione": "Francia"
+  },
+  {
+    "termine": "스페인",
+    "roman": "Seuwein",
+    "traduzione": "Spagna"
+  },
+  {
+    "termine": "독일",
+    "roman": "Dogil",
+    "traduzione": "Germania"
+  },
+  {
+    "termine": "브라질",
+    "roman": "Beurajil",
+    "traduzione": "Brasile"
+  },
+  {
+    "termine": "인도",
+    "roman": "Indo",
+    "traduzione": "India"
+  },
+  {
+    "termine": "러시아",
+    "roman": "Reosia",
+    "traduzione": "Russia"
+  },
+  {
+    "termine": "캐나다",
+    "roman": "Kaenada",
+    "traduzione": "Canada"
+  },
+  {
+    "termine": "호주",
+    "roman": "Hoju",
+    "traduzione": "Australia"
+  },
+  {
+    "termine": "멕시코",
+    "roman": "Meksiko",
+    "traduzione": "Messico"
+  },
+  {
+    "termine": "터키",
+    "roman": "Teoki",
+    "traduzione": "Turchia"
+  },
+  {
+    "termine": "그리스",
+    "roman": "Geuriseu",
+    "traduzione": "Grecia"
+  },
+  {
+    "termine": "스웨덴",
+    "roman": "Seuweden",
+    "traduzione": "Svezia"
+  },
+  {
+    "termine": "노르웨이",
+    "roman": "Norwei",
+    "traduzione": "Norvegia"
   }
 ]
