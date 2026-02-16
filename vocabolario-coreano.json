@@ -413,5 +413,206 @@
     "termine": "노르웨이",
     "roman": "Norwei",
     "traduzione": "Norvegia"
+  },
+  {
+    "termine": "비자(를) 받다",
+    "roman": "bija(reul) batda",
+    "traduzione": "ricevere il visto"
+  },
+  {
+    "termine": "커피(를) 마시다",
+    "roman": "keopi(reul) masida",
+    "traduzione": "bere caffè"
+  },
+  {
+    "termine": "영화(를) 보다",
+    "roman": "yeonghwa(reul) boda",
+    "traduzione": "guardare un film"
+  },
+  {
+    "termine": "음악(을) 듣다",
+    "roman": "eumak(eul) deutda",
+    "traduzione": "ascoltare musica"
+  },
+  {
+    "termine": "일본어를 가르치다",
+    "roman": "ilboneoreul gareuchida",
+    "traduzione": "insegnare il giapponese"
+  },
+  {
+    "termine": "책을 빌리다",
+    "roman": "chaekeul billida",
+    "traduzione": "prendere in prestito un libro"
+  },
+  {
+    "termine": "책을 읽다",
+    "roman": "chaekeul ikda",
+    "traduzione": "leggere un libro"
+  },
+  {
+    "termine": "춤을 추다",
+    "roman": "chumeul chuda",
+    "traduzione": "ballare"
+  },
+  {
+    "termine": "컴퓨터를 배우다",
+    "roman": "keompyuteoreul baeuda",
+    "traduzione": "imparare l'uso del computer"
+  },
+  {
+    "termine": "테니스를 치다",
+    "roman": "teniseureul chida",
+    "traduzione": "giocare a tennis"
+  },
+  {
+    "termine": "텔레비전을 보다",
+    "roman": "tellebijeoneul boda",
+    "traduzione": "guardare la TV"
+  },
+  {
+    "termine": "한국어를 공부하다",
+    "roman": "hangugeoreul gongbuhada",
+    "traduzione": "studiare la lingua coreana"
+  },
+  {
+    "termine": "월요일",
+    "roman": "woryoil",
+    "traduzione": "lunedì"
+  },
+  {
+    "termine": "화요일",
+    "roman": "hwayoil",
+    "traduzione": "martedì"
+  },
+  {
+    "termine": "수요일",
+    "roman": "suyoil",
+    "traduzione": "mercoledì"
+  },
+  {
+    "termine": "목요일",
+    "roman": "mogyoil",
+    "traduzione": "giovedì"
+  },
+  {
+    "termine": "금요일",
+    "roman": "geumyoil",
+    "traduzione": "venerdì"
+  },
+  {
+    "termine": "토요일",
+    "roman": "toyoil",
+    "traduzione": "sabato"
+  },
+  {
+    "termine": "일요일",
+    "roman": "iryoil",
+    "traduzione": "domenica"
+  },
+  {
+    "termine": "주말",
+    "roman": "jumal",
+    "traduzione": "fine settimana"
+  },
+  {
+    "termine": "체육관",
+    "roman": "cheyukgwan",
+    "traduzione": "palestra"
+  },
+  {
+    "termine": "커피숍",
+    "roman": "keopisyop",
+    "traduzione": "caffetteria"
+  },
+  {
+    "termine": "저도",
+    "roman": "jeodo",
+    "traduzione": "anche io (formale)"
+  },
+  {
+    "termine": "공항",
+    "roman": "gonghang",
+    "traduzione": "aeroporto"
+  },
+  {
+    "termine": "백화점",
+    "roman": "baekhwajeom",
+    "traduzione": "grande magazzino"
+  },
+  {
+    "termine": "태권도",
+    "roman": "taegwondo",
+    "traduzione": "Taekwondo"
+  },
+  {
+    "termine": "테니스장",
+    "roman": "teniseujang",
+    "traduzione": "campo da tennis"
+  },
+  {
+    "termine": "등산하다",
+    "roman": "deungsanhada",
+    "traduzione": "fare trekking"
+  },
+  {
+    "termine": "바쁘다",
+    "roman": "bappeuda",
+    "traduzione": "essere occupato"
+  },
+  {
+    "termine": "그리고",
+    "roman": "geurigo",
+    "traduzione": "e / inoltre"
+  },
+  {
+    "termine": "~부터 ~까지",
+    "roman": "buteo kkaji",
+    "traduzione": "da... a... (tempo/luogo)"
+  },
+  {
+    "termine": "아주",
+    "roman": "aju",
+    "traduzione": "molto"
+  },
+  {
+    "termine": "~에 오다",
+    "roman": "e oda",
+    "traduzione": "venire a/in"
+  },
+  {
+    "termine": "여행을 하다",
+    "roman": "yeohaengeul hada",
+    "traduzione": "viaggiare"
+  },
+  {
+    "termine": "억",
+    "roman": "eok",
+    "traduzione": "cento milioni"
+  },
+  {
+    "termine": "끝나다",
+    "roman": "kkeunnada",
+    "traduzione": "finire"
+  },
+  {
+    "termine": "모르다",
+    "roman": "moreuda",
+    "traduzione": "non sapere"
+  },
+  {
+    "termine": "재미있다",
+    "roman": "jaemiitda",
+    "traduzione": "essere interessante/divertente"
+  },
+  {
+    "termine": "같이",
+    "roman": "gatchi",
+    "traduzione": "insieme"
+  },
+  {
+    "termine": "무슨",
+    "roman": "museun",
+    "traduzione": "quale / che tipo di"
   }
 ]
+
